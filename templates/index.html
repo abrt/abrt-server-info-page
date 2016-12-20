@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Abrt Server</title>
+
+        <link rel="stylesheet" href="static/css/patternfly-additions.css">
+        <link rel="stylesheet" href="static/css/patternfly.css">
+        <link rel="stylesheet" href="static/css/bootstrap-multiselect.css">
+        <link rel="stylesheet" href="static/css/daterangepicker-bs3.css">
+        <link rel="stylesheet" href="static/css/bootstrap-tagsinput.css">
+        <link rel="stylesheet" href="static/css/typeaheadjs.css">
+        <link rel="stylesheet" href="static/css/style.css">
+
+        <script type="text/javascript">
+        ROOT_URL = "/faf/";
+        </script>
+        <script src="/static/js/jquery.js"></script>
+        <script src="/static/js/bootstrap.js"></script>
+        <script src="/static/js/bootstrap-multiselect.js"></script>
+        <script src="/static/js/moment.js"></script>
+        <script src="/static/js/daterangepicker.js"></script>
+        <script src="/static/js/bootstrap-tagsinput.js"></script>
+        <script src="/static/js/typeahead.bundle.js"></script>
+        <script src="/static/js/custom.js"></script>
+
+        <script src="/static/js/jquery.flot.js"></script>
+        <script src="/static/js/jquery.flot.pie.js"></script>
+        <script src="/static/js/jquery.flot.time.js"></script>
+        <script src="/static/js/jquery.flot.symbol.js"></script>
+        <script src="/static/js/jquery.flot.resize.js"></script>
+        <script src="/static/js/jquery.flot.simplelabel.js"></script>
+        <script src="/static/js/jquery.flot.axislabels.js"></script>
+        <script src="/static/js/report_graph.js"></script>
+
+
+
+
+    </head>
+    <body>
+        <div class="navbar navbar-default navbar-pf" role="navigation">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html"><strong
+                                        class="brand-title">{{config.BRAND_TITLE}}</strong>{{config.BRAND_SUBTITLE}}</a>
+            </div>
+        </div>
+        <div class='jumbotron depth-0'>
+            <div class='container'>
+                <div class="row">
+                    <div class="col-md-9 col-lg-9">
+                        <h1>Automatic Bug Reporting Tool</h1>
+                        <p>
+                            ABRT is a set of tools for detecting and reporting application crashes.<br>
+                            Crash can be automatically reported without human intervation.<br>
+                            Powerusers can add addional informations.<br>
+                            Reports are aggregated based on similarities for developers.
+                        </p>
+                    </div>
+                    <div class="col-md-3 col-lg-3">
+                        <div class="logo-transparent">
+                            <img src={{url_for('static', filename='abrt-logo.png')}}/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='container'>
+            <div class="col-md-6 col-lg-6">
+                <div class="single-block single-block-top-left">
+                    <h1>Fedora Analysis Framework</h1>
+                    <p>
+                        Web pages containing graphs and reports of crashes.<br>
+                        You can easily see when and how often application crashes.<br>
+                        Developers immediately see most frequent crashes.<br>
+                    </p>
+                    <a href={{config.URL_FOR_FAF}} class="btn btn-default depth-2">Continue to FAF</a><br>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6">
+                <div class="single-block single-block-top-right">
+                    <h1>Retrace Server</h1>
+                    <p>
+                        Reporting users can send coredump for remote analysis and recieve backtrace
+                        without a need to install debuginfo packages locally.
+                        This process is also integrated into automatic reporting.<br>
+                    </p>
+                        {% if config.URL_FOR_RS %}
+                            <a href={{config.URL_FOR_RS}} class="btn btn-default depth-2">Continue to Retrace Server</a><br>
+                        {% else %}
+                                <p>
+                                This feature is not accessible through web UI.
+                                </p>
+                        {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class='container'>
+            <div class="col-md-6 col-lg-6">
+                <div class="single-block">
+                    <h1>Automatic Bug Reporting Tool</h1>
+                    <p>
+                        Tool for recognition of defects in applications. This recogintion in
+                        automatic and to user a report is presented. This report helps maintainers
+                        to understand the bug.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6">
+                <div class="single-block">
+                    <h1>Gnome ABRT</h1>
+                    <p>
+                    A Gnome application for browsing detected problems. Each problem  is presented
+                    as a full report for better understaning of crash. Via this app a bug can be
+                    reported.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class='container'>
+            <div class="col-md-6 col-lg-6">
+                <div class="single-block">
+                    <h1>Libreport</h1>
+                    <p>
+                        A library providing API for reporting crashes.MORE
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6">
+                <div class="single-block">
+                    <h1>Satyr</h1>
+                    <p>
+                    SATYR TEXT
+                    </p>
+                </div>
+            </div>
+        </div>
+      <div class="jumbotron">
+          <div class="footer-panel">
+          ABRT |
+          <a href="wiki_pages">About</a>
+          |
+          <a href="https://github.com/abrt/">Report a bug</a>
+          </div>
+      </div>
+    </body>
+</html>

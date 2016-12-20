@@ -1,0 +1,200 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url('../bg.png');
+  color: #000;
+  height: 100%;
+}
+
+.logo-transparent {
+    opacity: 0.45;
+}
+
+.simple-frame {
+    background-color: rgba(52, 96, 159, 0.15);
+    border: 1px;
+    border-radius: 4px;
+    padding: 5px 20px;
+}
+
+.depth-0 {
+    filter: brightness(100%);
+}
+.depth-1 {
+    filter: brightness(95%);
+}
+.depth-2 {
+    filter: brightness(90%);
+}
+.depth-3 {
+    filter: brightness(85%);
+}
+.depth-4 {
+    filter: brightness(80%);
+}
+.depth-5 {
+    filter: brightness(75%);
+}
+
+.single-block {
+  min-height: 250px;
+  margin-bottom: 20px;
+  padding: 5px 20px 20px 20px;
+  background-color: rgba(52, 96, 159, 0.85);
+  border: 0px solid #3a3a3a;
+  border-radius: 0px 0px 0px 0px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.35);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.35);
+}
+
+.single-block-top-left {
+  border-radius: 15px 0px 0px 0px;
+}
+
+.single-block-top-right {
+  border-radius: 0px 15px 0px 0px;
+}
+
+.single-block p,
+.single-block-top-left p,
+.single-block-top-right p {
+    font-size: 120%;
+    color: #ffffff;
+    margin-bottom: 2px;
+}
+
+.single-block h1,
+.single-block-top-left h1,
+.single-block-top-right h1 {
+    font-size: 280%;
+    color: #ffffff;
+}
+
+.pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.report .graph,
+.problem .graph {
+  height: 180px;
+}
+.report .history_graph {
+  width: 95%;
+}
+
+.info ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.info ul li {
+  padding-left: 0;
+}
+
+#placeholder {
+  width: 100%;
+  height: 450px;
+}
+
+#tooltip {
+  position: absolute;
+  display: none;
+  border: 1px solid #fdd;
+  padding: 10px;
+  background-color: #fee;
+  opacity: 0.9;
+}
+
+.form-inline label {
+  display: none;
+}
+
+.showlabel label {
+  display: inline-block;
+}
+
+form .separated > div {
+  padding: 1em 0 0;
+}
+
+table.metric th:nth-child(2) { width: 150px; }
+
+td > div.progress {
+  margin-bottom: 0px;
+}
+
+/* border around nav-stacked just like in boostrap v1 */
+.nav-stacked > li + li {
+  margin-top: -1px
+}
+
+.nav-pills > li > a {
+  padding: 8px;
+  line-height: 18px;
+}
+
+.nav-pills.nav-stacked > li > a {
+  border: 1px sold #DDD;
+  border-radius: 0;
+}
+
+.nav-pills.nav-stacked > li:first-child > a {
+  border-radius: 4px 4px 0px 0px;
+}
+
+.nav-pills.nav-stacked > li:last-child > a {
+  border-radius: 0px 0px 4px 4px;
+}
+
+#date_stats h3 {
+  font-size: 120%;
+  font-weight: bold;
+}
+
+.jumbotron .footer-panel {
+  background-color: #efefef;
+  opacity: 0.75;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  text-align: center;
+}
+
+
+#footer {
+  background-color: #efefef;
+  opacity: 0.75;
+  margin-top: 2em;
+  background: none;
+  text-align: center;
+  font-size: small;
+}
+
+.navbar-pf .navbar-brand {
+    padding: 3px 0px 2px;
+}
+
+.navbar-pf .brand-title {
+  margin-right: 1em;
+}
+
+.input-group .bootstrap-tagsinput {
+  margin-bottom: 0;
+}
+
+tr.stripe {
+  background-color: #f5f5f5;
+}
+
+table.counts-table th:nth-child(2) { width: 150px; }
+
+.three-columns {
+  -webkit-column-count: 3; /* Chrome, Safari, Opera */
+  -moz-column-count: 3; /* Firefox */
+  column-count: 3;
+}
