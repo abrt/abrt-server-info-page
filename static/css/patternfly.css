@@ -9316,8 +9316,7 @@ h6 .label {
   margin-left: 5px;
 }
 .navbar-pf {
-  background: #34609f;
-  opacity: 0.75;
+  background: rgba(52, 96, 159, 0.75);
   border: 0;
   border-radius: 0;
   margin-bottom: 0;
