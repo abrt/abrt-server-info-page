@@ -16,9 +16,9 @@ body {
 }
 
 .single-block {
-  min-height: 200px;
+  min-height: 230px;
   margin-bottom: 20px;
-  padding: 5px 15px 0px 15px;
+  padding: 15px 15px 0px 15px;
 }
 
 .single-block p {
@@ -152,16 +152,16 @@ td > div.progress {
 }
 
 .wide-panel:nth-child(odd) .border-right {
-  border-right: 1px solid #DDE4EF;
+  border-right: 1px solid white;
 }
 
 .wide-panel:nth-child(even) .border-right {
-  border-right: 1px solid #2A4A79;
+  border-right: 1px solid black;
 }
 
 .wide-panel:nth-child(odd) .single-block p {
     color: white;
-    margin: 5px 0px 15px 0px;
+    margin: 5px 0px 30px 0px;
 }
 
 .wide-panel:nth-child(odd) .single-block h2 {
