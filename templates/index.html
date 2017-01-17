@@ -50,9 +50,11 @@
                         <h1>Automatic Bug Reporting Tool</h1>
                         <p>
                             ABRT is a set of tools for detecting and reporting application crashes.<br>
-                            Crash can be automatically reported without human intervation.<br>
-                            Powerusers can add addional informations.<br>
-                            Reports are aggregated based on similarities for developers.
+                            Crashes are automatically recognized and processed for later reporting
+                            and analysis.<br>
+                            This reporting can be automatic or users can add additional information
+                            and report it by our tools. Reports are collected, analyzed
+                            and aggregated providing valuable information for developers.
                         </p>
                     </div>
                     <div class="col-md-3 col-lg-3">
@@ -71,23 +73,26 @@
                         <div class="single-block border-right">
                             <h2>Fedora Analysis Framework</h2>
                             <p>
-                                Web pages containing graphs and reports of crashes.<br>
-                                You can easily see when and how often application crashes.<br>
-                                Developers immediately see most frequent crashes.<br>
+                                Framework for aggregating and analyzing reports of crashes.<br>
+                                For users a webpages are available containing reports, problems and
+                                statistics for finding out when, how and to whom application
+                                crashes.<br>
                             </p>
-                            <a href={{config.URL_FOR_FAF}} class="btn btn-default depth-2">Continue to FAF</a><br>
+                            <a href={{config.URL_FOR_FAF}} class="btn btn-default depth-2">Visit FAF
+                            webpages</a><br>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6">
                         <div class="single-block">
                             <h2>Retrace Server</h2>
                             <p>
-                                Reporting users can send coredump for remote analysis and recieve backtrace
+                                Reporting users can send coredump for remote analysis and receive backtrace
                                 without a need to install debuginfo packages locally.
                                 This process is also integrated into automatic reporting.<br>
                             </p>
                                 {% if config.URL_FOR_RS %}
-                                    <a href={{config.URL_FOR_RS}} class="btn btn-default depth-2">Continue to Retrace Server</a><br>
+                                    <a href={{config.URL_FOR_RS}} class="btn btn-default depth-2">Visit
+                                        Retrace Server</a><br>
                                 {% else %}
                                     This feature is not accessible through web UI.
                                 {% endif %}
@@ -104,9 +109,9 @@
                         <div class="single-block border-right">
                             <h2>Automatic Bug Reporting Tool</h2>
                             <p>
-                                Tool for recognition of defects in applications. This recogintion in
-                                automatic and to user a report is presented. This report helps maintainers
-                                to understand the bug.
+                                Tool for recognition of defects in applications. This recognition is
+                                automatic and to user a report is presented. This report can be
+                                reported to help developers fix that problem.
                             </p>
                         </div>
                     </div>
@@ -114,9 +119,9 @@
                         <div class="single-block">
                             <h2>Gnome ABRT</h2>
                             <p>
-                            A Gnome application for browsing detected problems. Each problem  is presented
-                            as a full report for better understaning of crash. Via this app a bug can be
-                            reported.
+                            A graphical application for browsing detected problems. Each problem  is presented
+                            as a full report for better understanding of crash. Via this app a bug
+                            can also be reported.
                             </p>
                         </div>
                     </div>
@@ -131,7 +136,10 @@
                         <div class="single-block border-right">
                             <h2>Libreport</h2>
                             <p>
-                                A library providing API for reporting crashes.MORE
+                                A library for reporting various problems to destinations like
+                                mailing lists, regular files, remote servers
+                                and bug tracking tools. Another destinations and tools can be
+                                easily added by writing its own plugins.
                             </p>
                         </div>
                     </div>
@@ -139,7 +147,10 @@
                         <div class="single-block">
                             <h2>Satyr</h2>
                             <p>
-                            SATYR TEXT
+                                Satyr is a collection of low-level algorithms for program failure
+                                processing,
+                                analysis and reporting supporting kernel space, user space, Python,
+                                and Java programs.
                             </p>
                         </div>
                     </div>
