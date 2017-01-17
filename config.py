@@ -12,5 +12,10 @@ class Config(object):
     BRAND_SUBTITLE = "Server"
     URL_FOR_FAF = "https://retrace.fedoraproject.org/faf/summary/"
     URL_FOR_RS = None
-
+    MORE_FAF = None
+    MORE_RS = None
+    MORE_ABRT = None
+    MORE_GABRT = None
+    MORE_LR = None
+    MORE_SATYR = None
 
