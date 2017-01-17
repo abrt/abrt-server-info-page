@@ -18,7 +18,7 @@ body {
 .single-block {
   min-height: 200px;
   margin-bottom: 20px;
-  padding: 5px 15px 15px 15px;
+  padding: 5px 15px 0px 15px;
 }
 
 .single-block p {
@@ -127,7 +127,7 @@ td > div.progress {
 }
 
 .wide-panel h1 {
-  padding-top: 13px;
+  padding: 10px 5px 10px 5px;
   font-size: 60px;
   margin: 0px 0px 0px 0px;
 }
@@ -161,18 +161,22 @@ td > div.progress {
 
 .wide-panel:nth-child(odd) .single-block p {
     color: white;
+    margin: 5px 0px 15px 0px;
 }
 
 .wide-panel:nth-child(odd) .single-block h2 {
   color: white;
+  margin: 5px 0px 15px 0px;
 }
 
 .wide-panel:nth-child(even) .single-block p {
     color: black;
+    margin: 5px 0px 15px 0px;
 }
 
 .wide-panel:nth-child(even) .single-block h2 {
   color: black;
+  margin: 5px 0px 15px 0px;
 }
 
 .navbar-pf .navbar-brand {
