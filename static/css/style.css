@@ -19,7 +19,6 @@ body {
   min-height: 200px;
   margin-bottom: 20px;
   padding: 5px 15px 15px 15px;
-  border-radius: 20px 20px 20px 20px;
 }
 
 .single-block p {
@@ -130,6 +129,16 @@ td > div.progress {
 .wide-panel h1 {
   padding-top: 13px;
   font-size: 60px;
+  margin: 0px 0px 0px 0px;
+}
+
+.row.no-gutters {
+    margin: 0px 0px 0px 0px;
+}
+
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+    padding: 0px 0px 0px 0px;
 }
 
 .wide-panel:nth-child(even) {
@@ -142,12 +151,12 @@ td > div.progress {
   background: #2A4A79;
 }
 
-.wide-panel:nth-child(odd) .single-block {
-  border: 1px solid #DDE4EF;
+.wide-panel:nth-child(odd) .border-right {
+  border-right: 1px solid #DDE4EF;
 }
 
-.wide-panel:nth-child(even) .single-block {
-  border: 1px solid #2A4A79;
+.wide-panel:nth-child(even) .border-right {
+  border-right: 1px solid #2A4A79;
 }
 
 .wide-panel:nth-child(odd) .single-block p {
