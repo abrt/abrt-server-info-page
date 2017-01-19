@@ -41,7 +41,7 @@ cp -a abrt_server_info_page.wsgi %{buildroot}/%{python_sitelib}/abrt-server-info
 cp -a config.py %{buildroot}/%{python_sitelib}/abrt-server-info-page
 cp -a config/abrt-server-info-page.conf %{buildroot}/%{_sysconfdir}/httpd/conf.d/
 cp -a templates/index.html %{buildroot}/%{python_sitelib}/abrt-server-info-page/templates
-cp -a static/* %{buildroot}/%{python_sitelib}/abrt-server-info-page/
+cp -a static/* %{buildroot}/%{python_sitelib}/abrt-server-info-page/static
 
 %files
 %config(noreplace) %{_sysconfdir}/httpd/conf.d/abrt-server-info-page.conf
