@@ -1,6 +1,6 @@
 Summary: Web page with summary of ABRT services
 Name: abrt-server-info-page
-Version: 1.2
+Version: 1.3
 Release: 1%{?dist}
 License: GPLv3+
 URL: https://github.com/marusak/abrt-server-info-page
@@ -51,5 +51,10 @@ cp -a static/* %{buildroot}/%{python_sitelib}/abrt-server-info-page/
 systemctl httpd condrestart
 
 %changelog
+* Thu Jan 19 2017 Matej Marusak <mmarusak@redhat.com> 1.3-1
+- Rename this project (mmarusak@redhat.com)
+- Polish specfile (mmarusak@redhat.com)
+- Initialized to use tito. (mmarusak@redhat.com)
+
 * Thu Jan 19 2017 Matej Marusak <mmarusak@redhat.com> 1.2-1
 - initial version
