@@ -11,12 +11,6 @@ Source0: %{name}-%{version}.tar.gz
 
 BuildArch: noarch
 
-BuildRequires: intltool
-BuildRequires: libtool
-BuildRequires: texinfo
-BuildRequires: asciidoc
-BuildRequires: xmlto
-
 Requires: python-flask >= 0.10
 Requires: httpd
 Requires: mod_wsgi
