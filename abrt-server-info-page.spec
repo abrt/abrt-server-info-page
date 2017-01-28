@@ -48,7 +48,7 @@ cp -a static/* %{buildroot}/%{python_sitelib}/abrt-server-info-page/static
 %{python_sitelib}/abrt-server-info-page
 
 %post
-systemctl httpd condrestart
+systemctl condrestart httpd
 
 %changelog
 * Thu Jan 19 2017 Matej Marusak <mmarusak@redhat.com> 1.1-1
