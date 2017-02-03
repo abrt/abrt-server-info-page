@@ -11,6 +11,8 @@ Source0: %{name}-%{version}.tar.gz
 
 BuildArch: noarch
 
+BuildRequires: python2-devel
+
 Requires: python-flask >= 0.10
 Requires: httpd
 Requires: mod_wsgi
