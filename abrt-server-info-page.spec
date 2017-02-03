@@ -42,6 +42,7 @@ cp -a static/* %{buildroot}/%{python_sitelib}/abrt-server-info-page/static
 %files
 %config(noreplace) %{_sysconfdir}/httpd/conf.d/abrt-server-info-page.conf
 %{python_sitelib}/abrt-server-info-page
+%license LICENSE
 
 %post
 systemctl condrestart httpd
