@@ -31,6 +31,32 @@ body {
     font-size: 37px;
 }
 
+.disclaimer-block {
+  background-color: rgba(120, 120, 120, 0.3);
+  min-height: 250px;
+  margin-bottom: 20px;
+  padding: 15px 15px 0px 15px;
+}
+
+.disclaimer-block p {
+    font-size: 100%;
+    margin-bottom: 2px;
+}
+
+.disclaimer-block h2 {
+    margin-top: 10px;
+    font-size: 28px;
+}
+
+.disclaimer-link {
+    color: white;
+}
+
+.disclaimer-link:hover,
+.disclaimer-link:focus {
+    color: rgba(255, 255, 255, 0.5);
+}
+
 .pre {
   white-space: pre-wrap;
   word-wrap: break-word;
@@ -159,22 +185,26 @@ td > div.progress {
   border-right: 1px solid black;
 }
 
-.wide-panel:nth-child(odd) .single-block p {
+.wide-panel:nth-child(odd) .single-block p,
+.wide-panel:nth-child(odd) .disclaimer-block p {
     color: white;
     margin: 5px 0px 30px 0px;
 }
 
-.wide-panel:nth-child(odd) .single-block h2 {
+.wide-panel:nth-child(odd) .single-block h2,
+.wide-panel:nth-child(odd) .disclaimer-block h2 {
   color: white;
   margin: 5px 0px 15px 0px;
 }
 
-.wide-panel:nth-child(even) .single-block p {
+.wide-panel:nth-child(even) .single-block p,
+.wide-panel:nth-child(even) .disclaimer-block p {
     color: black;
     margin: 5px 0px 15px 0px;
 }
 
-.wide-panel:nth-child(even) .single-block h2 {
+.wide-panel:nth-child(even) .single-block h2,
+.wide-panel:nth-child(even) .disclaimer-block h2 {
   color: black;
   margin: 5px 0px 15px 0px;
 }

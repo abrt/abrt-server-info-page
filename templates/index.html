@@ -14,6 +14,9 @@
         <link rel="stylesheet" href="{{url_for('static', filename='css/typeaheadjs.css')}}">
         <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
 
+        <script src="{{url_for('static', filename='js/jquery.js')}}"></script>
+        <script src="{{url_for('static', filename='js/bootstrap.js')}}"></script>
+
     </head>
     <body>
         <div class="navbar navbar-default navbar-pf">
@@ -84,6 +87,39 @@
                     </div>
                 </div>
             </div>
+            <a data-toggle="collapse" href="#disclaimer" class="disclaimer-link">Click to see retrace server's disclaimer</a>
+
+             <div id="disclaimer" class="collapse">
+                <div class='container'>
+                    <div class="row no-gutters">
+                        <div class="col-md-6 col-lg-6">
+                            <div class="disclaimer-block border-right">
+                                <h2>Keeping your data</h2>
+                                <p>
+                                    Your coredump is only kept on the server while the retrace job is running.
+                                    Once the job is finished, the server keeps retrace log and backtrace.
+                                    All the other data (including coredump) are deleted.
+                                    The retrace log and backtrace are only accessible via unique task ID and password, thus no one (except the author) is allowed to view it.
+                                    All the crash information (including backtrace) is deleted after
+                                    {{config.RS_DELETE_AFTER}} hours of inactivity.
+                                    No possibly private data are kept on the server any longer.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-6">
+                            <div class="disclaimer-block">
+                                <h2>Communicating with server</h2>
+                                <p>
+                                    Your coredump is only used for retrace purposes.
+                                    Server administrators are not trying to get your private data from coredumps or backtraces.
+                                    Using a secure communication channel (HTTPS) is strictly recommended.
+                                    Server administrators are not responsible for the problems related to the usage of an insecure channel (such as HTTP).
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </div>
         </div>
         <div class="wide-panel">
             <h1>End-user application</h1>

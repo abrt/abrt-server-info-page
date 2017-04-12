@@ -18,4 +18,4 @@ class Config(object):
     MORE_GABRT = None
     MORE_LR = None
     MORE_SATYR = None
-
+    RS_DELETE_AFTER = 24  # should be read from retrace-servers config
