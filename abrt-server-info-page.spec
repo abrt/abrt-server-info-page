@@ -1,6 +1,6 @@
 Summary: Web page with summary of ABRT services
 Name: abrt-server-info-page
-Version: 1.2
+Version: 1.3
 Release: 1%{?dist}
 License: GPLv3+
 URL: https://github.com/marusak/abrt-server-info-page
@@ -48,6 +48,11 @@ cp -a static/* %{buildroot}/%{python_sitelib}/abrt-server-info-page/static
 systemctl condrestart httpd
 
 %changelog
+* Wed Apr 12 2017 Miroslav Suchý <msuchy@redhat.com> 1.3-1
+- add link to wiki (msuchy@redhat.com)
+- add missing quotes (msuchy@redhat.com)
+- Add retrace server's disclaimer (mmarusak@redhat.com)
+
 * Sat Feb 04 2017 Matej Marusak <marusak.matej@gmail.com> 1.2-1
 - Add license into specfile (marusak.matej@gmail.com)
 - Add BuildRequires into specfile (marusak.matej@gmail.com)
