@@ -16,6 +16,7 @@ BuildRequires: python2-devel
 Requires: python2-flask >= 0.10
 Requires: httpd
 Requires: python2-mod_wsgi
+Requires(post): systemd
 
 %description
 Web page for use as front page of ABRT servers. Contains information about
