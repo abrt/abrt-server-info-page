@@ -13,9 +13,14 @@ BuildArch: noarch
 
 BuildRequires: python2-devel
 
+%if 0%{?rhel} > 7 || 0%{?fedora} > 27
 Requires: python2-flask >= 0.10
-Requires: httpd
 Requires: python2-mod_wsgi
+%else
+Requires: python-flask >= 0.10
+Requires: mod_wsgi
+%endif
+Requires: httpd
 Requires(post): systemd
 
 %description
