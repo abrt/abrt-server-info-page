@@ -1,6 +1,6 @@
 Summary: Web page with summary of ABRT services
 Name: abrt-server-info-page
-Version: 1.5
+Version: 1.6
 Release: 1%{?dist}
 License: GPLv3+
 URL: https://github.com/marusak/abrt-server-info-page
@@ -54,6 +54,9 @@ cp -a static/* %{buildroot}/%{python_sitelib}/abrt-server-info-page/static
 systemctl condrestart httpd
 
 %changelog
+* Wed Apr 18 2018 Miroslav Suchý <msuchy@redhat.com> 1.6-1
+- fix dependencies on F27- and RHEL (msuchy@redhat.com)
+
 * Wed Mar 21 2018 Miroslav Suchý <msuchy@redhat.com> 1.5-1
 - require systemd
 - Update Python 2 dependency declarations to new packaging standards
