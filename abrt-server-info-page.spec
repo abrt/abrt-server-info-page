@@ -1,3 +1,12 @@
+%if 0%{?fedora} > 27 || 0%{?rhel} > 7
+# Build python3
+%global with_python3 1
+%global PYTHONDIR %{python3_sitelib}
+%else
+%global with_python3 0
+%global PYTHONDIR %{python2_sitelib}
+%endif
+
 Summary: Web page with summary of ABRT services
 Name: abrt-server-info-page
 Version: 1.6
@@ -11,11 +20,15 @@ Source0: %{name}-%{version}.tar.gz
 
 BuildArch: noarch
 
+%if 0%{?with_python3}
+BuildRequires: python3-devel
+%else
 BuildRequires: python2-devel
+%endif
 
-%if 0%{?rhel} > 7 || 0%{?fedora} > 27
-Requires: python2-flask >= 0.10
-Requires: python2-mod_wsgi
+%if 0%{?with_python3}
+Requires: python3-flask >= 0.10
+Requires: python3-mod_wsgi
 %else
 Requires: python-flask >= 0.10
 Requires: mod_wsgi
@@ -31,23 +44,25 @@ ABRT's products.
 %setup -q
 
 %install
+sed -i "s|@PYTHONDIR@|%{PYTHONDIR}|g" config/abrt-server-info-page.conf
 mkdir -p %{buildroot}
-mkdir -p %{buildroot}/%{python_sitelib}/abrt-server-info-page/static
-mkdir -p %{buildroot}/%{python_sitelib}/abrt-server-info-page/static/js
-mkdir -p %{buildroot}/%{python_sitelib}/abrt-server-info-page/static/css
-mkdir -p %{buildroot}/%{python_sitelib}/abrt-server-info-page/static/fonts
-mkdir -p %{buildroot}/%{python_sitelib}/abrt-server-info-page/templates
+mkdir -p %{buildroot}/%{PYTHONDIR}/abrt-server-info-page/static
+mkdir -p %{buildroot}/%{PYTHONDIR}/abrt-server-info-page/static/js
+mkdir -p %{buildroot}/%{PYTHONDIR}/abrt-server-info-page/static/css
+mkdir -p %{buildroot}/%{PYTHONDIR}/abrt-server-info-page/static/fonts
+mkdir -p %{buildroot}/%{PYTHONDIR}/abrt-server-info-page/templates
 mkdir -p %{buildroot}/%{_sysconfdir}/httpd/conf.d
-cp -a abrt_server_info_page.py %{buildroot}/%{python_sitelib}/abrt-server-info-page
-cp -a abrt_server_info_page.wsgi %{buildroot}/%{python_sitelib}/abrt-server-info-page
-cp -a config.py %{buildroot}/%{python_sitelib}/abrt-server-info-page
+cp -a abrt_server_info_page.py %{buildroot}/%{PYTHONDIR}/abrt-server-info-page
+cp -a abrt_server_info_page.wsgi %{buildroot}/%{PYTHONDIR}/abrt-server-info-page
+cp -a config.py %{buildroot}/%{PYTHONDIR}/abrt-server-info-page
 cp -a config/abrt-server-info-page.conf %{buildroot}/%{_sysconfdir}/httpd/conf.d/
-cp -a templates/index.html %{buildroot}/%{python_sitelib}/abrt-server-info-page/templates
-cp -a static/* %{buildroot}/%{python_sitelib}/abrt-server-info-page/static
+cp -a templates/index.html %{buildroot}/%{PYTHONDIR}/abrt-server-info-page/templates
+cp -a static/* %{buildroot}/%{PYTHONDIR}/abrt-server-info-page/static
 
 %files
 %config(noreplace) %{_sysconfdir}/httpd/conf.d/abrt-server-info-page.conf
-%{python_sitelib}/abrt-server-info-page
+%{PYTHONDIR}/abrt-server-info-page
+
 %license LICENSE
 
 %post
