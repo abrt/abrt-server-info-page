@@ -9,7 +9,7 @@
 
 Summary: Web page with summary of ABRT services
 Name: abrt-server-info-page
-Version: 1.6
+Version: 1.7
 Release: 1%{?dist}
 License: GPLv3+
 URL: https://github.com/marusak/abrt-server-info-page
@@ -69,6 +69,9 @@ cp -a static/* %{buildroot}/%{PYTHONDIR}/abrt-server-info-page/static
 systemctl condrestart httpd
 
 %changelog
+* Thu Feb 07 2019 Martin Kutlak <mkutlak@redhat.com> 1.7-1
+- Migrate to python3 for F28+ and RHEL8+
+- add releaser for f29
 * Wed Apr 18 2018 Miroslav Suchý <msuchy@redhat.com> 1.6-1
 - fix dependencies on F27- and RHEL (msuchy@redhat.com)
 
