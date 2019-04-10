@@ -29,11 +29,11 @@
                         <h1>Automatic Bug Reporting Tool</h1>
                         <p>
                             ABRT is a set of tools for detecting and reporting application crashes.<br>
-                            Crashes are automatically recognized and processed for later reporting
+                            Crashes are automatically detected and processed for later reporting
                             and analysis.<br>
-                            This reporting can be automatic or users can add additional information
-                            and report it by our tools. Reports are collected, analyzed
-                            and aggregated providing valuable information for developers.
+                            The reporting can be both automated and user-assisted, with users providing additional information
+                            and reporting it using our tools. Reports are collected, analyzed
+                            and aggregated, providing valuable information for developers.
                         </p>
                     </div>
                     <div class="col-md-3 col-lg-3">
@@ -50,28 +50,27 @@
                 <div class="row no-gutters">
                     <div class="col-md-6 col-lg-6">
                         <div class="single-block border-right">
-                            <h2>Fedora Analysis Framework</h2>
+                            <h2>ABRT Analytics</h2>
                             <p>
-                                Framework for aggregating and analyzing reports of crashes.<br>
-                                For users a webpages are available containing reports, problems and
-                                statistics for finding out when, how and to whom application
-                                crashes.
+                                A framework for aggregating and analyzing reports of crashes.<br>
+                                Web pages are available to users, containing reports, problems and
+                                statistics associated with crashes, such as time, manner and owner.
                                 {% if config.MORE_FAF %}
                                     <a href="{{config.MORE_FAF}}">Learn more...</a><br>
                                 {% endif %}
                                 <br>
                             </p>
-                            <a href={{config.URL_FOR_FAF}} class="btn btn-default depth-2">Visit FAF
-                            webpages</a><br>
+                            <a href={{config.URL_FOR_FAF}} class="btn btn-default depth-2">Visit ABRT Analytics
+                            site</a><br>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6">
                         <div class="single-block">
                             <h2>Retrace Server</h2>
                             <p>
-                                Reporting users can send coredump for remote analysis and receive backtrace
-                                without a need to install debuginfo packages locally.
-                                This process is also integrated into automatic reporting.
+                                Users sending reports can also send coredump for remote analysis and receive backtrace
+                                without the need to install debuginfo packages locally.
+                                This process is also integrated into automated reporting.
                                 {% if config.MORE_RS %}
                                     <a href="{{config.MORE_RS}}">Learn more...</a><br>
                                 {% endif %}
@@ -87,7 +86,7 @@
                     </div>
                 </div>
             </div>
-            <a data-toggle="collapse" href="#disclaimer" class="disclaimer-link">Click to see retrace server's disclaimer</a>
+            <a data-toggle="collapse" href="#disclaimer" class="disclaimer-link">Click to see Retrace Server's disclaimer</a>
 
              <div id="disclaimer" class="collapse">
                 <div class='container'>
@@ -102,7 +101,7 @@
                                     The retrace log and backtrace are only accessible via unique task ID and password, thus no one (except the author) is allowed to view it.
                                     All the crash information (including backtrace) is deleted after
                                     {{config.RS_DELETE_AFTER}} hours of inactivity.
-                                    No possibly private data are kept on the server any longer.
+                                    No potentially private data are kept on the server beyond that point.
                                 </p>
                             </div>
                         </div>
@@ -113,7 +112,7 @@
                                     Your coredump is only used for retrace purposes.
                                     Server administrators are not trying to get your private data from coredumps or backtraces.
                                     Using a secure communication channel (HTTPS) is strictly recommended.
-                                    Server administrators are not responsible for the problems related to the usage of an insecure channel (such as HTTP).
+                                    Server administrators accept no responsibility for problems arising from the use of an insecure channel (such as HTTP).
                                 </p>
                             </div>
                         </div>
@@ -129,9 +128,9 @@
                         <div class="single-block border-right">
                             <h2>Automatic Bug Reporting Tool</h2>
                             <p>
-                                Tool for recognition of defects in applications. This recognition is
-                                automatic and to user a report is presented. This report can be
-                                reported to help developers fix that problem.
+                                A tool for detection of defects in applications. The detection is
+                                automatic and a report is presented to the user. This report can be
+                                sent to the developers to help them fix the problem.
                                 {% if config.MORE_ABRT %}
                                     <a href="{{config.MORE_ABRT}}">Learn more...</a><br>
                                 {% endif %}
@@ -140,11 +139,11 @@
                     </div>
                     <div class="col-md-6 col-lg-6">
                         <div class="single-block">
-                            <h2>Gnome ABRT</h2>
+                            <h2>GNOME ABRT</h2>
                             <p>
-                            A graphical application for browsing detected problems. Each problem  is presented
-                            as a full report for better understanding of crash. Via this app a bug
-                            can also be reported.
+                            A graphical application for browsing detected problems. Each problem is presented
+                            as a full report for better understanding of the given crash. Bugs
+                            can also be reported using this app.
                                 {% if config.MORE_GABRT %}
                                     <a href="{{config.MORE_GABRT}}">Learn more...</a><br>
                                 {% endif %}
@@ -164,8 +163,8 @@
                             <p>
                                 A library for reporting various problems to destinations like
                                 mailing lists, regular files, remote servers
-                                and bug tracking tools. Another destinations and tools can be
-                                easily added by writing its own plugins.
+                                and bug tracking tools. Other destinations and tools can be
+                                easily added by writing their own plugins.
                                 {% if config.MORE_LR %}
                                     <a href="{{config.MORE_LR}}">Learn more...</a><br>
                                 {% endif %}
@@ -178,7 +177,7 @@
                             <p>
                                 Satyr is a collection of low-level algorithms for program failure
                                 processing,
-                                analysis and reporting supporting kernel space, user space, Python,
+                                analysis and reporting, supporting kernel space, user space, Python,
                                 and Java programs.
                                 {% if config.MORE_SATYR %}
                                     <a href="{{config.MORE_SATYR}}">Learn more...</a><br>
