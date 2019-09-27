@@ -5,7 +5,6 @@ js_DATA = \
   color.js \
   custom.js \
   daterangepicker.js \
-  dumpdirs.js \
   jquery.js \
   jquery.flot.axislabels.js \
   jquery.flot.js \
