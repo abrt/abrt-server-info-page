@@ -11,7 +11,7 @@ Summary: Web page with summary of ABRT services
 Name: abrt-server-info-page
 Version: 1.8
 Release: 1%{?dist}
-License: GPLv3+
+License: GPL-3.0-or-later
 URL: https://github.com/marusak/abrt-server-info-page
 # source is created by:
 # git clone
